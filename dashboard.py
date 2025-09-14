@@ -4,7 +4,7 @@ import pandas as pd
 facebook = pd.read_csv('dataset/Facebook.csv')
 google = pd.read_csv('dataset/Google.csv')
 tiktok = pd.read_csv('dataset/TikTok.csv')
-business = pd.read_csv('dataset/Business.csv')
+business = pd.read_csv('dataset/business.csv')
 
 # Preview the first few rows
 print(facebook.head())
@@ -206,6 +206,7 @@ filtered_data = merged[(merged['date'] >= pd.to_datetime(start_date)) & (merged[
 # Show filtered KPIs
 st.metric("Filtered Revenue", f"${filtered_data['total_revenue'].sum():,.0f}")
 st.metric("Filtered Spend", f"${filtered_data['spend'].sum():,.0f}")
+
 
 
 
